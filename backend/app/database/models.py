@@ -6,7 +6,7 @@ from sqlalchemy import DateTime
 
 from datetime import datetime
 
-from backend.app.database.database import Base
+from app.database.database import Base
 
 
 class PredictionLog(Base):

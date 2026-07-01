@@ -1,5 +1,5 @@
-from backend.app.database.database import SessionLocal
-from backend.app.database.models import PredictionLog
+from app.database.database import SessionLocal
+from app.database.models import PredictionLog
 
 
 def log_prediction(

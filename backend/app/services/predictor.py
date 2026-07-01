@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 
-from backend.app.core.config import MODEL_PATH, SCALER_PATH
+from app.core.config import MODEL_PATH, SCALER_PATH
 
 
 class Predictor:

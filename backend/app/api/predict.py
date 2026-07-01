@@ -3,13 +3,13 @@ from datetime import datetime
 
 from fastapi import APIRouter
 
-from backend.app.schemas.request import PredictionRequest
-from backend.app.schemas.response import PredictionResponse
+from app.schemas.request import PredictionRequest
+from app.schemas.response import PredictionResponse
 
-from backend.app.services.predictor import predictor
-from backend.app.services.logger import log_prediction
+from app.services.predictor import predictor
+from app.services.logger import log_prediction
 
-from backend.app.websocket.connection_manager import manager
+from app.websocket.connection_manager import manager
 
 router = APIRouter()
 
