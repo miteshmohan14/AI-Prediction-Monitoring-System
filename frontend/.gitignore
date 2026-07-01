@@ -1,0 +1,18 @@
+# Dataset
+datasets/
+
+# Database
+prediction_logs.db
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# React
+frontend/node_modules/
+frontend/build/
+
+# Environment variables
+.env

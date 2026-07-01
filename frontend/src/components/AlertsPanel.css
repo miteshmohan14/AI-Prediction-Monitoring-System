@@ -1,0 +1,112 @@
+.alerts-panel {
+  background: #1f1f38;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.alerts-panel h2 {
+  margin-bottom: 18px;
+  color: white;
+}
+
+.alert-card {
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  color: white;
+  transition: 0.25s;
+}
+
+.alert-card:hover {
+  transform: translateY(-2px);
+}
+
+.alert-card h4 {
+  margin-bottom: 5px;
+}
+
+.danger {
+  background: #d32f2f;
+}
+
+.warning {
+  background: #f57c00;
+}
+
+.info {
+  background: #1976d2;
+}
+
+.success {
+  background: #2e7d32;
+}
+.alert-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:10px;
+
+}
+
+.alert-title{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.alert-time{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+font-size:12px;
+
+opacity:.8;
+
+}
+
+.alert-card{
+
+animation:slideAlert .4s ease;
+
+}
+
+@keyframes slideAlert{
+
+from{
+
+opacity:0;
+
+transform:translateX(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+.alert-card p{
+
+margin:0;
+
+font-size:14px;
+
+}

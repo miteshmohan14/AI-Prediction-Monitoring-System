@@ -1,0 +1,75 @@
+.live-status-bar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:#1E293B;
+
+padding:15px 25px;
+
+margin:20px 0;
+
+border-radius:14px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.status-item{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+color:white;
+
+font-weight:600;
+
+}
+
+.live-green{
+
+color:#22C55E;
+
+animation:pulse 1.4s infinite;
+
+}
+
+.live-red{
+
+color:#EF4444;
+
+animation:pulse 1.4s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.4;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.4;
+
+}
+
+}

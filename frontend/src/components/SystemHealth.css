@@ -1,0 +1,29 @@
+.health-card{
+    background:#1f1f38;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+    height:100%;
+}
+
+.health-card h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.health-row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:white;
+}
+
+.health-row:last-child{
+    border:none;
+}
+
+.green{
+    color:#00E676;
+    font-weight:bold;
+}

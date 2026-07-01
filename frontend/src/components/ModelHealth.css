@@ -1,0 +1,43 @@
+.model-health-card {
+    background: #1f1f38;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.35);
+}
+
+.model-health-card h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.metric-box {
+    background: #29294d;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.metric-box:hover {
+    transform: translateY(-4px);
+    background: #32325d;
+}
+
+.metric-title {
+    color: #bbbbbb;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.metric-value {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
