@@ -10,7 +10,6 @@ from app.api.metrics import router as metrics_router
 from app.api.system_metrics import router as system_router
 from app.websocket.websocket import router as websocket_router
 
-
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -26,8 +25,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:3000",
-    "https://YOUR-FRONTEND-NAME.onrender.com"],
+        "http://localhost:3000",
+        "https://ai-prediction-monitoring-system.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
