@@ -1,0 +1,73 @@
+                         +----------------------+
+                         |      React UI        |
+                         |----------------------|
+                         | Dashboard            |
+                         | Charts               |
+                         | Tables               |
+                         | Live Monitoring      |
+                         +----------+-----------+
+                                    |
+                      REST API / WebSocket
+                                    |
+                                    ▼
+                 +--------------------------------+
+                 |         FastAPI Backend        |
+                 |--------------------------------|
+                 | Prediction API                |
+                 | Metrics API                   |
+                 | Logs API                      |
+                 | System Metrics API            |
+                 | WebSocket Server              |
+                 +------+------------------------+
+                        |
+          +-------------+-------------+
+          |                           |
+          ▼                           ▼
++----------------------+     +--------------------+
+| Random Forest Model  |     | SQLite Database    |
+|----------------------|     |--------------------|
+| StandardScaler       |     | Prediction Logs    |
+| Fraud Detection      |     | Historical Data    |
++----------------------+     +--------------------+
+          |
+          ▼
+   Fraud / Normal Prediction
+          |
+          ▼
+ Database Updated + WebSocket Broadcast
+          |
+          ▼
+ React Dashboard Updates Instantly
+
+
+
+Architecture Flow
+
+Transaction
+      │
+      ▼
+React Dashboard
+      │
+      ▼
+Axios Request
+      │
+      ▼
+FastAPI (/predict)
+      │
+      ▼
+Feature Scaling
+      │
+      ▼
+Random Forest Model
+      │
+      ▼
+Prediction
+      │
+      ├──────────────► SQLite Log
+      │
+      ├──────────────► Metrics Update
+      │
+      └──────────────► WebSocket Broadcast
+                              │
+                              ▼
+                  React Dashboard Refresh
