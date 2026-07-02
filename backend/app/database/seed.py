@@ -7,11 +7,17 @@ from app.database.models import PredictionLog
 
 
 def seed_database():
+    print("=" * 60)
+    print("STARTING DATABASE SEED")
+    print("=" * 60)
+
     db = SessionLocal()
 
     try:
-        # If data already exists, do nothing
-        if db.query(PredictionLog).count() > 0:
+        count = db.query(PredictionLog).count()
+        print("Current rows:", count)
+
+        if count > 0:
             print("Database already contains data.")
             return
 
@@ -20,7 +26,12 @@ def seed_database():
             "prediction_logs.csv"
         )
 
+        print("CSV Path:", csv_path)
+        print("CSV Exists:", os.path.exists(csv_path))
+
         df = pd.read_csv(csv_path)
+
+        print("Rows in CSV:", len(df))
 
         for _, row in df.iterrows():
 
@@ -30,19 +41,23 @@ def seed_database():
                 confidence=float(row["Confidence"]),
                 latency=float(row["Latency"]),
                 amount=float(row["Amount"]),
-                timestamp=datetime.fromisoformat(
-                    row["Timestamp"]
-                )
+                timestamp=datetime.fromisoformat(row["Timestamp"]),
             )
 
             db.add(record)
 
         db.commit()
 
-        print(f"Imported {len(df)} prediction logs.")
+        print("SUCCESS!")
+        print("Imported", len(df), "records.")
 
     except Exception as e:
-        print("Database seed failed:", e)
+        db.rollback()
+        print("SEED FAILED")
+        print(type(e))
+        print(e)
 
     finally:
         db.close()
+
+    print("=" * 60)
