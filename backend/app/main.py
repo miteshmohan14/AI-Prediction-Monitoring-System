@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database.database import engine
 from app.database.models import Base
+from app.database.seed import seed_database
 from app.api.predict import router as predict_router
 from app.api.health import router as health_router
 from app.api.logs import router as logs_router
@@ -11,6 +12,16 @@ from app.api.system_metrics import router as system_router
 from app.websocket.websocket import router as websocket_router
 
 Base.metadata.create_all(bind=engine)
+print("=" * 50)
+print("MAIN.PY IS EXECUTING")
+print("=" * 50)
+
+seed_database()
+
+print("=" * 50)
+print("SEED FUNCTION FINISHED")
+print("=" * 50)
+seed_database()
 
 app = FastAPI(
     title="AI Prediction Monitoring System",
