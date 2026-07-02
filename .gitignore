@@ -16,3 +16,16 @@ venv/
 
 # Environment variables
 .env
+venv/
+
+.env
+
+prediction_logs.db
+
+datasets/
+
+__pycache__/
+
+*.pyc
+
+*.db

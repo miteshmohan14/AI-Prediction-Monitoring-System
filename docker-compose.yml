@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+
+  backend:
+
+    build: ./backend
+
+    container_name: ai-backend
+
+    ports:
+
+      - "8000:10000"
+
+    restart: always
