@@ -11,13 +11,18 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY backend/requirements.txt .
 
 RUN pip install --upgrade pip
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copy backend
+COPY backend ./backend
+
+# Copy ML models
+COPY ml ./ml
+
+WORKDIR /app/backend
 
 EXPOSE 10000
 
