@@ -218,27 +218,21 @@ http://localhost:3000
 
 ## Dashboard
 
-(Add Screenshot Here)
-
----
+<img width="1888" height="913" alt="dashboard png" src="https://github.com/user-attachments/assets/d4eabfa3-fba1-4ad7-9a8b-3688f3a88429" />
 
 ## Prediction Analytics
 
-(Add Screenshot Here)
+<img width="1887" height="912" alt="latency trend and chart png" src="https://github.com/user-attachments/assets/78729b08-e24d-44f2-8728-758585a26915" />
 
----
 
 ## System Monitoring
 
-(Add Screenshot Here)
+<img width="1892" height="822" alt="Model Performance png" src="https://github.com/user-attachments/assets/912956d8-64ac-49db-ab20-5f5a504227b7" />
 
----
 
 ## Prediction Logs
 
-(Add Screenshot Here)
-
----
+<img width="1891" height="908" alt="predictions png" src="https://github.com/user-attachments/assets/ad1b06e6-c039-41fe-9481-8f7183cf5f15" />
 
 # Future Improvements
 
